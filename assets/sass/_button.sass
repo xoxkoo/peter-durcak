@@ -1,0 +1,21 @@
+.btn
+    display: inline-block
+    padding: 1em 2em
+    margin: 1em 0
+    background: $c_secondary
+    border: $b_width solid darken($c_secondary, 20)
+    border-radius: $b_radius
+    cursor: pointer
+    transition: .5s
+
+    &:focus,
+    &:hover
+      background: lighten($c_secondary, 6)
+
+.btn-back
+  transition: .3s
+
+  &:focus,
+  &:hover
+    color: $c_primary
+

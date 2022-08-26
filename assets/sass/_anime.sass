@@ -1,0 +1,22 @@
+.fade-out
+    animation: fade-out-an .5s forwards
+
+.fade-in
+    animation: fade-in-an .5s forwards
+
+@keyframes fade-in-an
+    0%
+        transform: translateY(-50px)
+        opacity: .7
+    100%
+        transform: translateY(0px)
+        opacity: 1
+
+@keyframes fade-out-an
+    0%
+        transform: translateY(0)
+        opacity: 1
+    100%
+        transform: translateY(50px)
+        opacity: .7
+        

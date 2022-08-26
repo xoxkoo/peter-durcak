@@ -1,0 +1,105 @@
+body
+    background: $c_bg
+    color: $c_dark
+    font-family: 'Nunito', sans-serif
+
+a
+    color: inherit
+    text-decoration: none
+
+.container
+    width: 90%
+    margin: auto
+
+.title
+    margin: 0
+    font-size: 3rem
+
+
+.paragraph-title
+    font-size: 1.4rem
+
+ul
+    padding: 0
+    & li
+        list-style: none
+        padding: 0
+
+img
+    width: 100%
+    position: relative
+    z-index: -1
+
+p
+    line-height: 1.5em
+    padding-left: 1em
+
+.row
+    display: flex
+    justify-content: space-between
+
+header
+    margin-bottom: 2em
+
+.link
+    color: $c_primary
+    transition: .3s
+    position: relative
+
+    &::after
+        content: ""
+        position: absolute
+        left: 0
+        display: block
+        width: 0
+        height: 2px
+        background: $c_primary
+        transition: .3s
+        border-radius: $b_radius
+
+    &:hover::after
+        width: 100%
+
+.icons 
+    margin: 1.5em 0
+    
+    & li
+        padding: 0 .5em
+        
+
+.navigation
+    margin: 1.5em 0
+
+    & li
+        font-size: 1.2rem
+        padding-bottom: .25em
+
+        &::before
+            padding-right: .5em
+            content: "|"
+
+        &:last-child
+            &::after
+                padding: 0
+                content: ""
+
+.buttons
+    align-items: center
+
+.content
+    transition: .5s all
+
+//poster
+.poster
+    & p 
+        padding: 0
+        margin: .5em 1em 2em 0
+        color: lighten($c_dark, 15)
+
+    & img
+        display: block
+        object-fit: cover
+        border-radius: $b_radius
+        margin: 0 auto
+        max-width: 400px
+
