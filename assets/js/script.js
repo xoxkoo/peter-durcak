@@ -28,9 +28,12 @@ function a(data) {
     const html =  document.querySelector('.content')
     const div = html.children[0]
 
-    div.classList.remove('fade-in')
-
-    div.classList.add('fade-out')
+    if (div) {
+        
+        div.classList.remove('fade-in')
+        div.classList.add('fade-out')
+        
+    }
     
     setTimeout(() => {
         html.innerHTML = data

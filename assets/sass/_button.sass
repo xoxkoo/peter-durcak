@@ -1,4 +1,5 @@
 .btn
+    box-shadow: transparentize($c_secondary, 0.1) 0px 4px 12px
     display: inline-block
     padding: 1em 2em
     margin: 1em 0
@@ -13,9 +14,13 @@
       background: lighten($c_secondary, 6)
 
 .btn-back
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px
+  border: none
+  background: none
   transition: .3s
 
   &:focus,
   &:hover
-    color: $c_primary
+    background: 
+    // color: $c_primary
 
