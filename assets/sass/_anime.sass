@@ -4,6 +4,21 @@
 .fade-in
     animation: fade-in-an .5s forwards
 
+.animate
+    transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    opacity: 0
+
+.animate-l
+    transform: translateX(-100px)
+
+.animate-r
+    transform: translateX(100px)
+
+.animate-element 
+    opacity: 1
+    transform: translateX(0)
+
+
 @keyframes fade-in-an
     0%
         // transform: translateY(-50px)

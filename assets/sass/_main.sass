@@ -3,10 +3,12 @@
     &:before,
     &:after 
         box-sizing: border-box
+html
+    -webkit-font-smoothing: antialiased
+    scroll-behavior: smooth
 
 body
     margin: 0
-    -webkit-font-smoothing: antialiased
     background: $c_bg
     color: $c_dark
     font-family: 'Nunito', sans-serif
@@ -18,6 +20,12 @@ a
 .container
     width: 90%
     margin: auto
+
+section
+    margin: 4em 0
+
+    & h1
+        font-size: 2rem
 
 .title
     margin: 0
@@ -43,20 +51,39 @@ p
     padding-left: 1em
 
 .row
+    position: relative
     display: flex
     justify-content: space-between
 
 header
-    margin: 2em 0
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px
+    width: 100%
+    background: $c_light
+    transition: .35s
+    // position: fixed
+    top: 0
+    z-index: 10
+    height: 6em
+    // padding: 1em 0 
+    margin: 0
 
-.content
-    margin-bottom: 2.5em
+    & .row
+        transition: .3s
+        padding: 2em 0
 
-    & .container
-        box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px
-        background: $c_light
-        padding: 1em
-        border-radius: $b_radius
+.fixed
+    height: 5rem
+    background: #fff
+
+    & .row
+        padding: 1.5em 0
+
+// .content
+    // & .container
+    //     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px
+    //     background: $c_light
+    //     padding: 1em
+    //     border-radius: $b_radius
 
 .link
     color: $c_primary
@@ -79,9 +106,15 @@ header
 
 .icons 
     margin: 0
+
+    & a
+        display: inline-block
     
     & li
+        display: inline
         padding: 0 .5em .5em
+        &:last-child
+            padding-bottom: 0
 
     & svg
         height: 2em
@@ -96,23 +129,6 @@ header
             & path
                 fill: $c_primary
         
-
-.navigation
-    margin: 0
-
-    & li
-        font-size: 1.2rem
-        padding-bottom: .25em
-
-        &::before
-            padding-right: .5em
-            content: "|"
-
-        &:last-child
-            &::after
-                padding: 0
-                content: ""
-
 .buttons
     align-items: center
 
@@ -130,6 +146,7 @@ header
 
 //poster
 .poster
+    margin: 3em auto 0
     & p 
         padding: 0
         margin: .5em 1em 2em 0
@@ -142,7 +159,8 @@ header
         margin: 0 auto
         max-width: 400px
 
-footer .container
+footer
+    width: 100%
     height: 150px
     background: $c_dark
 
