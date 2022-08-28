@@ -1,9 +1,11 @@
+const spinner = document.querySelector('.spinner')
 
 document.addEventListener('click', function(e) {
     if(e.target.getAttribute('id') === 'link' || e.target.getAttribute('class') === 'link') {
         e.preventDefault()
         const href = e.target.getAttribute('href')
 
+        spinner.style.display = 'block'
         loadPage(href)
     }
     
@@ -17,14 +19,15 @@ function loadPage(page) {
         response.text()
     )
     .then(data => {
-        a(data)
+        showData(data)
     })
     .catch(err => {
           loadPage(page)  
     })
 }
 
-function a(data) {
+function showData(data) {
+
     const html =  document.querySelector('.content')
     const div = html.children[0]
 
@@ -32,11 +35,12 @@ function a(data) {
         
         div.classList.remove('fade-in')
         div.classList.add('fade-out')
-        
+
     }
     
     setTimeout(() => {
-        html.innerHTML = data
+        spinner.style.display = 'none'
 
+        html.innerHTML = data
     }, 500)
 }

@@ -1,4 +1,12 @@
+*
+    box-sizing: border-box
+    &:before,
+    &:after 
+        box-sizing: border-box
+
 body
+    margin: 0
+    -webkit-font-smoothing: antialiased
     background: $c_bg
     color: $c_dark
     font-family: 'Nunito', sans-serif
@@ -39,7 +47,16 @@ p
     justify-content: space-between
 
 header
-    margin-bottom: 2em
+    margin: 2em 0
+
+.content
+    margin-bottom: 2.5em
+
+    & .container
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px
+        background: $c_light
+        padding: 1em
+        border-radius: $b_radius
 
 .link
     color: $c_primary
@@ -61,7 +78,7 @@ header
         width: 100%
 
 .icons 
-    margin: 1.5em 0
+    margin: 0
     
     & li
         padding: 0 .5em .5em
@@ -81,7 +98,7 @@ header
         
 
 .navigation
-    margin: 1.5em 0
+    margin: 0
 
     & li
         font-size: 1.2rem
@@ -124,4 +141,8 @@ header
         border-radius: $b_radius
         margin: 0 auto
         max-width: 400px
+
+footer .container
+    height: 150px
+    background: $c_dark
 
