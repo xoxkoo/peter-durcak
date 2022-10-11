@@ -163,8 +163,8 @@ header
 
 .hero
 	padding-bottom: 0
-	background: #fff
-	background: linear-gradient(0deg, rgba(43,56,92,1) 0%, rgba(255,255,255,0) 60%)
+	background: $c_bg
+	background: linear-gradient(0deg, $c_primary 0%, transparentize($c_bg, 1) 60%)
 	// margin: 3em auto 5em
 
 	& .hero-image-group
@@ -201,7 +201,7 @@ header
 // ABOUT section
 #about
 	// padding-top: 0
-	background: #2b385c
+	background: $c_primary
 	color: $c_light
 	& ul
 		display: flex
@@ -223,7 +223,7 @@ header
 
 // CIVIL
 #civil
-	background: #d9232a
+	background: $c_secondary
 	color: $c_light
 
 #program
