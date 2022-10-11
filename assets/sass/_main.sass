@@ -12,7 +12,7 @@ body
 	margin: 0
 	background: $c_bg
 	color: $c_dark
-	font-family: 'Raleway', sans-serif
+	font-family: 'acumin-pro', sans-serif
 
 a
 	color: inherit
@@ -162,7 +162,7 @@ header
 // HERO section
 
 .hero
-	// padding-bottom: 4em
+	padding-bottom: 0
 	background: #fff
 	background: linear-gradient(0deg, rgba(43,56,92,1) 0%, rgba(255,255,255,0) 40%)
 	// margin: 3em auto 5em
@@ -176,7 +176,8 @@ header
 		right: 0em
 		position: absolute
 		z-index: -1
-		height: 110%
+		height: 80%
+		top: 0
 
 	// & #Rectangle_1
 	// 	height: 1000px
@@ -189,9 +190,13 @@ header
 		margin: .5em 1em 1.5em 0
 		color: lighten($c_dark, 15)
 
+	.btn
+		margin-bottom: 2em
+
 	& img
 		border-radius: $b_radius
 		z-index: -2
+		height: 100%
 
 // ABOUT section
 #about
