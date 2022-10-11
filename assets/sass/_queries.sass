@@ -1,42 +1,65 @@
-@media (min-width: 450px)
-    #nav-icon
-        display: none
-
-    .icons li
-        display: inline
-
-    .navigation
-        padding: 2px 0 0
-        opacity: 1
-        transform: translateY(0)
-        & li
-            padding: 0
-            display: inline
-            &::before
-                padding: 0
-                content: ""
-            &::after
-                padding: 0 .5em
-                content: "|"
-
-
 @media (min-width: 750px)
-    // header
-    //     margin-bottom: 15vh
+	#nav-icon
+		display: none
 
-    .container
-        width: 85%
-    .col-responsive
-        display: flex
+	.icons li
+		display: inline
 
-    .content
-        & img
-            width: 30%
-            margin: 0 0 0 auto
+	.navigation
+		padding: 2px 0 0
+		opacity: 1
+		transform: translateY(0)
+		background: none
+		box-shadow: none
+		& li
+			font-size: 1.1rem
+			padding: 0
+			display: inline
+			&::before
+				padding: 0
+				content: ""
+			&::after
+				padding: 0 .5em
+				content: "|"
+	.container
+		width: 85%
 
-@media (min-width: 1050px) 
-    html
-        font-size: 1.15rem
+	.row-md
+		display: flex
+		justify-content: space-between
 
-    .container
-        width: 80%
+	.w-40-md
+		width: 40%
+	.w-45-md
+		width: 45%
+
+	.hero
+		& img
+			width: 30%
+			margin: 0 0 0 auto
+
+		& h1
+			margin-top: 1.5em
+
+	.img-rotated
+		height: 350px
+		width: 80%
+		margin: -2em 2em 1em
+		// transform: rotate(-4deg) translateY(-60px)
+
+	.gallery
+		display: flex
+		& img
+			width: 50%
+
+	.civil
+		& img
+			object-fit: contain
+			max-height: 400px
+
+@media (min-width: 1050px)
+	html
+		font-size: 1.2rem
+
+	.container
+		width: 80%

@@ -1,166 +1,259 @@
 *
-    box-sizing: border-box
-    &:before,
-    &:after 
-        box-sizing: border-box
+	box-sizing: border-box
+	&:before,
+	&:after
+		box-sizing: border-box
 html
-    -webkit-font-smoothing: antialiased
-    scroll-behavior: smooth
+	-webkit-font-smoothing: antialiased
+	scroll-behavior: smooth
 
 body
-    margin: 0
-    background: $c_bg
-    color: $c_dark
-    font-family: 'Nunito', sans-serif
+	margin: 0
+	background: $c_bg
+	color: $c_dark
+	font-family: 'Nunito', sans-serif
 
 a
-    color: inherit
-    text-decoration: none
+	color: inherit
+	text-decoration: none
+
+p, li
+	line-height: 1.25rem
 
 .container
-    width: 90%
-    margin: auto
+	width: 90%
+	margin: auto
 
 section
-    margin: 4em 0
+	padding: 3em 0
+	margin: 0
 
-    & h1
-        font-size: 2rem
+	& h1
+		font-weight: bolder
+		font-size: 2.5rem
+		margin: 0
 
 .title
-    margin: 0
-    font-size: 3rem
-
+	margin: 0
+	font-size: 3rem
 
 .paragraph-title
-    font-size: 1.4rem
+	font-size: 1.4rem
 
 ul
-    padding: 0
-    & li
-        list-style: none
-        padding: 0
+	padding-left: 2em
+	& li
+		padding: .25em
 
 img
-    width: 100%
-    position: relative
-    z-index: -1
+	display: block
+	width: 100%
+	position: relative
+	object-fit: cover
 
 p
-    line-height: 1.5em
-    padding-left: 1em
+	line-height: 1.5em
+	padding-left: 1em
 
 .row
-    position: relative
-    display: flex
-    justify-content: space-between
+	position: relative
+	display: flex
+	justify-content: space-between
+
+.col
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+
+.w-40
+	width: 40%
 
 header
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px
-    width: 100%
-    background: $c_light
-    transition: .35s
-    // position: fixed
-    top: 0
-    z-index: 10
-    height: 6em
-    // padding: 1em 0 
-    margin: 0
+	border-bottom: 1px solid rgba(0, 0, 0, 0.08)
+	// box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px
+	width: 100%
+	background: $c_bg
+	margin: 0
+	padding: 1.5em 0
+	// position: fixed
+	top: 0
+	z-index: 10
+	transition: .3s
 
-    & .row
-        transition: .3s
-        padding: 2em 0
+header.fixed
+	background: #fff
+	position: fixed
+	padding: 1em 0
 
-.fixed
-    height: 5rem
-    background: #fff
-
-    & .row
-        padding: 1.5em 0
-
-// .content
-    // & .container
-    //     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px
-    //     background: $c_light
-    //     padding: 1em
-    //     border-radius: $b_radius
+	// .content
+	// & .container
+	// box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px
+	// background: $c_light
+	// padding: 1em
+	// border-radius: $b_radius
 
 .link
-    color: $c_primary
-    transition: .3s
-    position: relative
+	color: $c_primary
+	transition: color .3s
+	position: relative
 
-    &::after
-        content: ""
-        position: absolute
-        left: 0
-        display: block
-        width: 0
-        height: 2px
-        background: $c_primary
-        transition: .3s
-        border-radius: $b_radius
+	&::after
+		content: ""
+		position: absolute
+		left: 0
+		display: block
+		width: 0
+		height: 2px
+		background: $c_primary
+		transition: .3s
+		border-radius: $b_radius
 
-    &:hover::after
-        width: 100%
+	&:hover::after
+		width: 100%
 
-.icons 
-    margin: 0
+.icons
+	padding: 0
+	margin: 0
 
-    & a
-        display: inline-block
-    
-    & li
-        display: inline
-        padding: 0 .5em .5em
-        &:last-child
-            padding-bottom: 0
+	& a
+		display: inline-block
 
-    & svg
-        height: 2em
-        width: 2em
+	& li
+		display: inline
+		padding: 0 .5em .5em
+		&:last-child
+			padding-bottom: 0
 
-        & path
-            transition: all .3s
-            fill: $c_dark
+	& svg
+		height: 1.7em
+		width: 1.7em
+		transition: transform .3s
 
-        &:hover,
-        &:focus
-            & path
-                fill: $c_primary
-        
+		& path
+			transition: fill .3s
+			fill: $c_dark
+
+		&:hover,
+		&:focus
+			transform: rotate(7deg)
+			& path
+				fill: $c_dark
+
 .buttons
-    align-items: center
+	align-items: center
 
 #overlay
-    position: fixed
-    visibility: hidden
-    left: 0
-    top: 0
-    width: 100%
-    height: 100%
-    background: transparentize($c_dark, .5)
-    backdrop-filter: blur(1.5px)
-    transform: scale(0.5)
-    transition: .3s
+	position: fixed
+	visibility: hidden
+	left: 0
+	top: 0
+	width: 100%
+	height: 100%
+	background: transparentize($c_dark, .5)
+	backdrop-filter: blur(1.5px)
+	transform: scale(0.5)
+	transition: .3s
 
-//poster
+// HERO section
 .poster
-    margin: 3em auto 0
-    & p 
-        padding: 0
-        margin: .5em 1em 2em 0
-        color: lighten($c_dark, 15)
+	// margin: 3em auto 5em
+	& p
+		font-size: 1.1rem
+		padding: 0
+		margin: .5em 1em 1.5em 0
+		color: lighten($c_dark, 15)
 
-    & img
-        display: block
-        object-fit: cover
-        border-radius: $b_radius
-        margin: 0 auto
-        max-width: 400px
+	& img
+		border-radius: $b_radius
+		margin: 0 auto
+		max-width: 400px
+		z-index: -1
+
+// ABOUT section
+#about
+	background: #2b385c
+	color: $c_light
+	& ul
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+
+	& .row-md
+		justify-content: space-between
+
+.img-rotated
+	width: 80%
+	height: 400px
+	border: 10px solid $c_bg
+	transform: rotate(-4deg)
+	margin: 2.5em auto
+
+.gallery
+	margin: 1em auto 0
+
+// CIVIL
+#civil
+	background: #d9232a
+	color: $c_light
+
+#program
+	padding-top: 0
+	& h1
+		position: relative
+		display: block
+		color: $c_light
+		padding: 1em
+		background: $c_tertiary
+		text-align: center
+		margin-bottom: 1em
+
+	& h2
+		color: $c_light
+		padding: 1em
+		width: 100%
+		background: $c_tertiary
+
+	& img
+		margin-top: 1em
+		margin-bottom: 1em
+
+	& .footer
+		font-size: 1.2rem
+		margin-top: 1em
+		font-weight: bold
+		padding: 1em 0
+		background: $c_tertiary
+		color: $c_light
+
+.arrow
+	position: absolute
+	left: 50%
+	bottom: 0
+	transform: translate(-50%, 100%)
+	width: 0
+	height: 0
+	border-left: 20px solid transparent
+	border-right: 20px solid transparent
+	border-top: 20px solid $c_tertiary
+	z-index: 1000
+
+// CONTACT section
+#contact
+	padding: 0 0 2em
+	& p
+		margin: 0
+		text-align: center
+
+	& .link
+		font-weight: bold
+		color: $c_tertiary
+
+		&:hover
+			color: $c_tertiary
+		&::after
+			background: $c_tertiary
 
 footer
-    width: 100%
-    height: 150px
-    background: $c_dark
-
+	width: 100%
+	height: 150px
+	background: $c_dark

@@ -1,25 +1,24 @@
 .btn
-    box-shadow: transparentize($c_secondary, 0.1) 0px 4px 12px
-    display: inline-block
-    padding: 1em 2em
-    margin: 1em 0
-    background: $c_secondary
-    border: $b_width solid darken($c_secondary, 20)
-    border-radius: $b_radius
-    cursor: pointer
-    transition: .5s
+	color: $c_light
+	box-shadow: transparentize($c_primary, .8) 0px 4px 12px
+	display: inline-block
+	padding: 1em 2em
+	margin: 1em 0
+	background: $c_primary
+	border: $b_width solid darken($c_primary, 20)
+	border-radius: $b_radius
+	cursor: pointer
+	transition: .5s
 
-    &:focus,
-    &:hover
-      background: lighten($c_secondary, 6)
+	&:focus,
+	&:hover
+		background: lighten($c_primary, 6)
 
-.btn-back
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px
-  border: none
-  background: none
+// .btn-back
+// 	box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px
+// 	border: none
+// 	background: none
 
-  &:focus,
-  &:hover
-    background: transparentize(lighten($c_secondary, 6), .5)
-    // color: $c_primary
-
+// 	&:focus,
+// 	&:hover
+// 		background: transparentize(lighten($c_secondary, 6), .5)

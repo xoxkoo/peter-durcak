@@ -8,7 +8,7 @@
 //         spinner.style.display = 'block'
 //         loadPage(href)
 //     }
-    
+
 // })
 
 // function loadPage(page) {
@@ -22,7 +22,7 @@
 //         showData(data)
 //     })
 //     .catch(err => {
-//           loadPage(page)  
+//           loadPage(page)
 //     })
 // }
 
@@ -32,12 +32,12 @@
 //     const div = html.children[0]
 
 //     if (div) {
-        
+
 //         div.classList.remove('fade-in')
 //         div.classList.add('fade-out')
 
 //     }
-    
+
 //     setTimeout(() => {
 //         spinner.style.display = 'none'
 
@@ -48,33 +48,43 @@ document.getElementById('nav-icon').addEventListener('click', function () {
     if(this.classList.contains('open')) {
         this.classList.remove('open')
         document.querySelector('.navigation').classList.remove('open')
-        if(document.querySelector('header').classList.contains('fixed'))
-            document.querySelector('header').style.height = '5rem'
-        else
-            document.querySelector('header').style.height = '6rem'
+      //   if(document.querySelector('header').classList.contains('fixed'))
+      //       document.querySelector('header').style.height = '5rem'
+      //   else
+      //       document.querySelector('header').style.height = '6rem'
     }
     else {
         this.classList.add('open')
         document.querySelector('.navigation').classList.add('open')
-        if(document.querySelector('header').classList.contains('fixed'))
-            document.querySelector('header').style.height = '10.5rem'
-        else
-            document.querySelector('header').style.height = '11rem'
-            
+      //   if(document.querySelector('header').classList.contains('fixed'))
+      //       document.querySelector('header').style.height = '12rem'
+      //   else
+      //       document.querySelector('header').style.height = '12.5rem'
+
     }
 
 })
 
 const elements = document.querySelectorAll('.animate')
+let scrolling = false
 
-document.addEventListener('scroll', (e) => {
-    //add header background when scroll down
-    // document.querySelector('header').classList.toggle('fixed', window.scrollY > 0)
+// on scroll animations
+window.addEventListener('scroll', (e) => {
+    scrolling = true
+}, { passive: true })
 
-    elements.forEach(element => {
-        if(window.scrollY + window.innerHeight > element.offsetTop + (window.innerHeight * 0.2)) {
-            element.classList.add('animate-element')
-        }
-    })
-    
-})
+setInterval(() => {
+    if (scrolling) {
+
+        scrolling = false;
+         //  add header background when scroll down
+			// document.querySelector('header').classList.toggle('fixed', window.scrollY > 0)
+
+			elements.forEach(element => {
+				if(window.scrollY + window.innerHeight > element.offsetTop + (window.innerHeight * 0.2)) {
+						element.classList.add('animate-element')
+				}
+			})
+    }
+
+}, 150);

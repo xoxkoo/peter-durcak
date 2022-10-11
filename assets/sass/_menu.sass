@@ -1,74 +1,80 @@
 .navigation
-    opacity: 0
-    padding: 3em 0 0
-    margin-top: 5rem
-    transition: .3s
-    transform: translateY(-100%)
-    margin: 0
+	position: absolute
+	right: 0
+	background: $c_bg
+	box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px
+	opacity: 0
+	padding: 1em
+	transition: .3s
+	transform: translateY(-100%)
+	margin: 0
 
-    & li
-        font-size: 1.2rem
-        padding-bottom: .25em
+	& li
+		font-size: 1.5rem
+		padding: 1.2em 0
+		list-style: none
+		padding-bottom: .75em
 
-        &::before
-            padding-right: .5em
-            content: "|"
+		&::before
+			padding-right: .5em
+			content: ""
 
-        &:last-child
-            &::after
-                padding: 0
-                content: ""
+		&:first-child
+			padding-top: 0
+		&:last-child
+			&::after
+				padding: 0
+				content: ""
 
-    &.open
-      transform: translateY(0)
-      opacity: 1
+	&.open
+		transform: translateY(20%)
+		opacity: 1
 
 #nav-icon
-  position: absolute
-  right: 0
-  width: 30px
-  height: 25px
+	position: absolute
+	right: 0
+	width: 30px
+	height: 25px
 
-  display: flex
-  flex-direction: column
-  justify-content: space-between
-  align-items: flex-end
-  align-self: center
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	align-items: flex-start
+	align-self: center
 
-  transform: rotate(0deg)
-  transition: .5s ease-in-out
-  cursor: pointer
-  z-index: 1000
+	transform: rotate(0deg)
+	transition: .5s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+	cursor: pointer
+	z-index: 1000
 
-  & span
-    display: block
-    height: 3px
-    width: 100%
-    background: $c_dark
-    border-radius: 3px
-    opacity: 1
-    transform: rotate(0deg)
-    transition: .25s ease-in-out
+	& span
+		display: block
+		height: 3px
+		width: 100%
+		background: $c_dark
+		border-radius: 3px
+		opacity: 1
+		transform: rotate(0deg)
+		transition: .25s cubic-bezier(0.175, 0.885, 0.32, 1.275)
 
-  & span:nth-child(1)
-    transform-origin: right top
+	& span:nth-child(1)
+		transform-origin: right top
 
-  & span:nth-child(2)
-    width: 50%
-    transform-origin: right center
+	& span:nth-child(2)
+		width: 50%
+		transform-origin: right center
 
-  & span:nth-child(3)
-    transform-origin: right bottom
+	& span:nth-child(3)
+		transform-origin: right bottom
 
 #nav-icon.open
+	& span:nth-child(1)
+		transform: rotate(-45deg)
+		margin-top: 2px
 
-  & span:nth-child(1)
-    transform: rotate(-45deg)
-    margin-top: 2px
+	& span:nth-child(2)
+		width: 0
+		opacity: 0
 
-  & span:nth-child(2)
-    width: 0
-    opacity: 0
-
-  & span:nth-child(3)
-    transform: rotate(45deg)
+	& span:nth-child(3)
+		transform: rotate(45deg)
