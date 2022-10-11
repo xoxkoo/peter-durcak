@@ -3,11 +3,13 @@
 	right: 0
 	background: $c_bg
 	box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px
+	border-radius: $b_radius
 	opacity: 0
 	padding: 1em
 	transition: .3s
 	transform: translateY(-100%)
 	margin: 0
+	z-index: 10
 
 	& li
 		font-size: 1.5rem
@@ -78,3 +80,19 @@
 
 	& span:nth-child(3)
 		transform: rotate(45deg)
+
+#overlay
+	position: fixed
+	visibility: hidden
+	left: 0
+	top: 0
+	width: 100%
+	height: 100%
+	opacity: 0
+	background: transparentize($c_dark, .5)
+	backdrop-filter: blur(1.5px)
+	// transform: scale(0.5)
+	transition: .3s
+	&.display
+		visibility: visible
+		opacity: 1

@@ -142,21 +142,16 @@ header.fixed
 .buttons
 	align-items: center
 
-#overlay
-	position: fixed
-	visibility: hidden
-	left: 0
-	top: 0
-	width: 100%
-	height: 100%
-	background: transparentize($c_dark, .5)
-	backdrop-filter: blur(1.5px)
-	transform: scale(0.5)
-	transition: .3s
-
 // HERO section
-.poster
+
+.hero
+	// padding-bottom: 4em
+	background: #fff
+	background: linear-gradient(0deg, rgba(43,56,92,1) 0%, rgba(255,255,255,0) 40%)
 	// margin: 3em auto 5em
+
+.poster
+	z-index: 1
 	& p
 		font-size: 1.1rem
 		padding: 0
@@ -166,11 +161,12 @@ header.fixed
 	& img
 		border-radius: $b_radius
 		margin: 0 auto
-		max-width: 400px
+		max-width: 450px
 		z-index: -1
 
 // ABOUT section
 #about
+	// padding-top: 0
 	background: #2b385c
 	color: $c_light
 	& ul
