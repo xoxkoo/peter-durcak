@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="176" height="681.5" viewBox="0 0 176 681.5">
+  <defs>
+    <filter id="Ellipse_1" x="0" y="505.5" width="176" height="176" filterUnits="userSpaceOnUse">
+      <feOffset dy="-7" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="5.5" result="blur"/>
+      <feFlood flood-opacity="0.204"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_2" data-name="Group 2" transform="translate(-48.5 -92)">
+    <rect id="Rectangle_1" data-name="Rectangle 1" width="34" height="606" transform="translate(102 92)" fill="#d9232a"/>
+    <rect id="Rectangle_2" data-name="Rectangle 2" width="34" height="606" transform="translate(136 92)" fill="#fff"/>
+    <g id="Group_1" data-name="Group 1">
+      <g transform="matrix(1, 0, 0, 1, 48.5, 92)" filter="url(#Ellipse_1)">
+        <circle id="Ellipse_1-2" data-name="Ellipse 1" cx="71.5" cy="71.5" r="71.5" transform="translate(16.5 529)" fill="#fff"/>
+      </g>
+      <text id="_1." data-name="1." transform="translate(101 732)" fill="#d9232a" font-size="111" font-family="Lato-Bold, Lato" font-weight="700" letter-spacing="-0.083em"><tspan x="0" y="0">1.</tspan></text>
+    </g>
+  </g>
+</svg>
