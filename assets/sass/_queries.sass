@@ -2,11 +2,9 @@
 	#nav-icon
 		display: none
 
-	.icons li
-		display: inline
-
 	.navigation
-		padding: 2px 0 0
+		position: relative
+		padding: 0
 		opacity: 1
 		transform: translateY(0)
 		background: none
@@ -21,6 +19,27 @@
 			&::after
 				padding: 0 .5em
 				content: "|"
+
+	.link
+		display: inline
+		box-shadow: none
+		padding: 0
+		color: $c_primary
+		transition: color .3s
+		position: relative
+
+		&::after
+			content: ""
+			position: absolute
+			left: 0
+			display: block
+			width: 0
+			height: 2px
+			background: $c_primary
+			transition: .3s
+			border-radius: $b_radius
+		&:hover::after
+			width: 100%
 	.container
 		width: 85%
 
@@ -53,11 +72,12 @@
 		display: flex
 		& img
 			width: 50%
+			max-height: 43.75rem
 
 	.civil
 		& img
 			object-fit: contain
-			max-height: 400px
+			max-height: 25rem
 
 @media (min-width: 1050px)
 	html
@@ -65,3 +85,23 @@
 
 	.container
 		width: 80%
+
+	.hero img
+		height: 500px
+
+	#civil img
+		width: 45%
+		margin-left: auto
+		margin-right: auto
+
+@media (min-width: 1550px)
+	#civil img
+		width: 38%
+@media (min-width: 2050px)
+	html
+		font-size: 1.32rem
+
+	.container
+		width: 70%
+	#civil img
+		width: 30%
