@@ -8,6 +8,7 @@ html
 	scroll-behavior: smooth
 
 body
+	overflow-x: hidden
 	margin: 0
 	background: $c_bg
 	color: $c_dark
@@ -231,11 +232,21 @@ header
 		text-align: center
 		margin-bottom: 1em
 
-	& h2
+	& .headline
 		color: $c_light
-		padding: 1em
+		padding: 0 1em
 		width: 100%
 		background: $c_tertiary
+
+	& .row
+		justify-content: flex-start
+		align-items: center
+
+	& .icon
+		display: inline
+		width: 2rem
+		height: 2rem
+		margin: 0 1em 0 0
 
 	& img
 		margin-top: 1em
